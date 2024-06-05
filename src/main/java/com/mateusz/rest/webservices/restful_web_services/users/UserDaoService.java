@@ -3,6 +3,7 @@ package com.mateusz.rest.webservices.restful_web_services.users;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,12 @@ public class UserDaoService {
 
     // public User save(User user);
 
-    // public User findOne(User user);
+    public User findOne(int id) {
+        // Create local variable "predicate"
+        Predicate<? super User> predicate = user -> user.getId().equals(id);
+        return users.stream()
+                .filter(predicate)
+                .findFirst().get();
+    }
 
 }
