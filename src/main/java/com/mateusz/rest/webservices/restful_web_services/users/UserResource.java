@@ -1,9 +1,12 @@
 package com.mateusz.rest.webservices.restful_web_services.users;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 // import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,8 +36,12 @@ public class UserResource {
 
     // POST /users
     @PostMapping("/users")
-    public void createOneUser(@RequestBody User user) {
-        userDaoService.save(user);
+    public ResponseEntity<User> createOneUser(@RequestBody User user) {
+        User savedUser = userDaoService.save(user);
+        // /users/4 => /users/{id}, user.getId
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+                .buildAndExpand(savedUser.getId()).toUri();
+        return ResponseEntity.created(location).build();
     }
 
 }
