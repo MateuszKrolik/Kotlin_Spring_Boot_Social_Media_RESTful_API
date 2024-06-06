@@ -44,3 +44,12 @@ Content-Type: application/json
 #     "birthDate": "2003-05-21"
 #   }
 # ]
+
+###
+
+GET http://localhost:8080/users/5 HTTP/1.1
+Content-Type: application/json
+
+# {
+#   "status": 404,
+#   "error": "Not Found",
