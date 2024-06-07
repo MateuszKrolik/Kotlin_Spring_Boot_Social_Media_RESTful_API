@@ -53,3 +53,8 @@ Content-Type: application/json
 # {
 #   "status": 404,
 #   "error": "Not Found",
+
+###
+
+DELETE http://localhost:8080/users/4 HTTP/1.1
+Content-Type: application/json

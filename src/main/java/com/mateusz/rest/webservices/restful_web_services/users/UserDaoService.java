@@ -41,4 +41,10 @@ public class UserDaoService {
                 .findFirst().orElse(null);
     }
 
+    public void deleteById(int id) {
+        // Create local variable "predicate"
+        Predicate<? super User> predicate = user -> user.getId().equals(id);
+        users.removeIf(predicate);
+    }
+
 }
