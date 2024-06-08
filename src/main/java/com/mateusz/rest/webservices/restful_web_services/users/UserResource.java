@@ -3,6 +3,8 @@ package com.mateusz.rest.webservices.restful_web_services.users;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import jakarta.validation.Valid;
+
 import java.net.URI;
 import java.util.List;
 
@@ -42,7 +44,7 @@ public class UserResource {
 
     // POST /users
     @PostMapping("/users")
-    public ResponseEntity<User> createOneUser(@RequestBody User user) {
+    public ResponseEntity<User> createOneUser(@Valid @RequestBody User user) {
         User savedUser = userDaoService.save(user);
         // /users/4 => /users/{id}, user.getId
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
