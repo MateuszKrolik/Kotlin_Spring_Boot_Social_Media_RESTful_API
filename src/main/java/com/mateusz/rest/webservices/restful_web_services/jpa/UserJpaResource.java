@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.mateusz.rest.webservices.restful_web_services.users.Post;
+import com.mateusz.rest.webservices.restful_web_services.users.PostNotFoundException;
 import com.mateusz.rest.webservices.restful_web_services.users.User;
 // import com.mateusz.rest.webservices.restful_web_services.users.UserDaoService;
 import com.mateusz.rest.webservices.restful_web_services.users.UserNotFoundException;
@@ -32,12 +33,16 @@ public class UserJpaResource {
 
     private UserRepository userRepository;
 
+    private PostRepository postRepository;
+
     // @Autowired
-    public UserJpaResource(UserRepository userRepository
+    public UserJpaResource(UserRepository userRepository,
+            PostRepository postRepository
     // UserDaoService userDaoService
     ) {
         // this.userDaoService = userDaoService;
         this.userRepository = userRepository;
+        this.postRepository = postRepository;
     }
 
     // GET /users
@@ -91,6 +96,45 @@ public class UserJpaResource {
             throw new UserNotFoundException("id:" + id);
 
         return user.get().getPosts();
+    }
+
+    @PostMapping("/jpa/users/{id}/posts")
+    public ResponseEntity<Post> createOnePostForUser(@PathVariable int id, @Valid @RequestBody Post post) {
+        Optional<User> user = userRepository.findById(id);
+
+        if (user.isEmpty())
+            throw new UserNotFoundException("id:" + id);
+
+        post.setUser(user.get());// get because it's Optional
+
+        Post savedPost = postRepository.save(post);
+
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+                .buildAndExpand(savedPost.getId()).toUri();
+        return ResponseEntity.created(location).build();
+
+    }
+
+    @GetMapping("/jpa/users/{userId}/posts/{postId}")
+    public EntityModel<Post> retrieveOnePost(@PathVariable int userId, @PathVariable int postId) {
+        Optional<User> user = userRepository.findById(userId);
+
+        if (user.isEmpty()) {
+            throw new UserNotFoundException("id:" + userId);
+        }
+
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new PostNotFoundException("id:" + postId));
+
+        EntityModel<Post> entityModel = EntityModel.of(post);
+
+        WebMvcLinkBuilder linkToUser = linkTo(methodOn(this.getClass()).retrieveOneUser(userId));
+        WebMvcLinkBuilder linkToPosts = linkTo(methodOn(this.getClass()).retrieveAllPostsForUser(userId));
+
+        entityModel.add(linkToUser.withRel("user"));
+        entityModel.add(linkToPosts.withRel("all-posts"));
+
+        return entityModel;
     }
 
 }
