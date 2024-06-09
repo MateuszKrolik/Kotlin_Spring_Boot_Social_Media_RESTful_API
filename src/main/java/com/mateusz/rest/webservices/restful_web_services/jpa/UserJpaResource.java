@@ -3,6 +3,7 @@ package com.mateusz.rest.webservices.restful_web_services.jpa;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.mateusz.rest.webservices.restful_web_services.users.Post;
 import com.mateusz.rest.webservices.restful_web_services.users.User;
 // import com.mateusz.rest.webservices.restful_web_services.users.UserDaoService;
 import com.mateusz.rest.webservices.restful_web_services.users.UserNotFoundException;
@@ -80,6 +81,16 @@ public class UserJpaResource {
     @DeleteMapping("/jpa/users/{id}")
     public void deleteOneUser(@PathVariable int id) {
         userRepository.deleteById(id);
+    }
+
+    @GetMapping("/jpa/users/{id}/posts")
+    public List<Post> retrieveAllPostsForUser(@PathVariable int id) {
+        Optional<User> user = userRepository.findById(id);
+
+        if (user.isEmpty())
+            throw new UserNotFoundException("id:" + id);
+
+        return user.get().getPosts();
     }
 
 }
