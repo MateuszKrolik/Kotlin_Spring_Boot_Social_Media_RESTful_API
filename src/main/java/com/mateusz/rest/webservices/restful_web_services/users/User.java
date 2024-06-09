@@ -29,6 +29,9 @@ public class User {
         this.birthDate = birthDate;
     }
 
+    protected User() { // default constructor
+    }
+
     public Integer getId() {
         return id;
     }

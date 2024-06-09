@@ -76,3 +76,25 @@ content-type: application/json
 #   "message": "Total errors are: 2, First error is: Name should have at least 2 characters!",
 #   "details": "uri=/users"
 # }
+
+###
+
+DELETE http://localhost:8080/jpa/users/1 HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/jpa/users HTTP/1.1
+content-type: application/json
+
+{
+    "user_name": "Mateusz",
+    "birth_date": "2003-05-21"
+}
+
+###
+
+GET http://localhost:8080/jpa/users HTTP/1.1
+Content-Type: application/json
+
+###
