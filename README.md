@@ -18,3 +18,7 @@
 | Retrieve all users         | GET /users/{id}/posts           |
 | Create one post for a user | POST /users/{id}/posts          |
 | Retrieve details of a post | GET /users/{id}/posts/{post_id} |
+
+## Swagger Auto-Docs:
+
+![alt text](images/swagger.png)
