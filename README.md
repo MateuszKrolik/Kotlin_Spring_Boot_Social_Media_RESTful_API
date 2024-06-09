@@ -22,3 +22,7 @@
 ## Swagger Auto-Docs:
 
 ![alt text](images/swagger.png)
+
+## HAL Explorer:
+
+![alt text](images/hal_explorer.png)
