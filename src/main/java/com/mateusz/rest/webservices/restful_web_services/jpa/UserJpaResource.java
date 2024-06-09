@@ -46,7 +46,7 @@ public class UserJpaResource {
     }
 
     // GET /users
-    @GetMapping("/jpa/users")
+    @GetMapping("/users")
     public List<User> retrieveAllUsers() {
         return userRepository.findAll();
     }
@@ -57,7 +57,7 @@ public class UserJpaResource {
     // WebMvcLinkBuilder
 
     // GET /users/{id}
-    @GetMapping("/jpa/users/{id}")
+    @GetMapping("/users/{id}")
     public EntityModel<User> retrieveOneUser(@PathVariable int id) {
         Optional<User> user = userRepository.findById(id);
 
@@ -74,7 +74,7 @@ public class UserJpaResource {
     }
 
     // POST /users
-    @PostMapping("/jpa/users")
+    @PostMapping("/users")
     public ResponseEntity<User> createOneUser(@Valid @RequestBody User user) {
         User savedUser = userRepository.save(user);
         // /users/4 => /users/{id}, user.getId
@@ -83,12 +83,12 @@ public class UserJpaResource {
         return ResponseEntity.created(location).build();
     }
 
-    @DeleteMapping("/jpa/users/{id}")
+    @DeleteMapping("/users/{id}")
     public void deleteOneUser(@PathVariable int id) {
         userRepository.deleteById(id);
     }
 
-    @GetMapping("/jpa/users/{id}/posts")
+    @GetMapping("/users/{id}/posts")
     public List<Post> retrieveAllPostsForUser(@PathVariable int id) {
         Optional<User> user = userRepository.findById(id);
 
@@ -98,7 +98,7 @@ public class UserJpaResource {
         return user.get().getPosts();
     }
 
-    @PostMapping("/jpa/users/{id}/posts")
+    @PostMapping("/users/{id}/posts")
     public ResponseEntity<Post> createOnePostForUser(@PathVariable int id, @Valid @RequestBody Post post) {
         Optional<User> user = userRepository.findById(id);
 
@@ -115,7 +115,7 @@ public class UserJpaResource {
 
     }
 
-    @GetMapping("/jpa/users/{userId}/posts/{postId}")
+    @GetMapping("/users/{userId}/posts/{postId}")
     public EntityModel<Post> retrieveOnePost(@PathVariable int userId, @PathVariable int postId) {
         Optional<User> user = userRepository.findById(userId);
 
