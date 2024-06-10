@@ -15,7 +15,7 @@ public class SpringSecurityConfiguration {
                 http
                                 // Lambda DSL w/ "authz" meaning authorization
                                 .authorizeHttpRequests(authz -> authz
-                                                // enable access to root url for all users for AWS HealthCheck
+                                                // enable access to root url for all users for possible Cloud HealthCheck
                                                 .requestMatchers("/").permitAll()
                                                 .anyRequest().authenticated() // 1. All requests should be authenticated
                                 )
