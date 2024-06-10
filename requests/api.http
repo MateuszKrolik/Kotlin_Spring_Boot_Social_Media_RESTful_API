@@ -1,9 +1,10 @@
 POST http://localhost:8080/users HTTP/1.1
 content-type: application/json
+Authorization: Basic dummyusername dummypassword 
 
 {
-    "user_name": "Mateusz",
-    "birth_date": "2003-05-21"
+    "user_name": "New User",
+    "birth_date": "2023-05-21"
 }
 
 # HTTP/1.1 200 
@@ -121,11 +122,13 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/users/1/posts HTTP/1.1
+POST http://localhost:8080/users/2/posts HTTP/1.1
 content-type: application/json
+Authorization: Basic dummyusername dummypassword 
+
 
 {
-    "description": "I'm stuck in a dead-end job help"
+    "description": "I love my job :)"
 }
 
 ### 
