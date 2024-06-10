@@ -15,6 +15,7 @@ content-type: application/json
 
 GET http://localhost:8080/users HTTP/1.1
 Content-Type: application/json
+Authorization: Basic dummyusername dummypassword 
 
 # HTTP/1.1 200 
 # Content-Type: application/json
