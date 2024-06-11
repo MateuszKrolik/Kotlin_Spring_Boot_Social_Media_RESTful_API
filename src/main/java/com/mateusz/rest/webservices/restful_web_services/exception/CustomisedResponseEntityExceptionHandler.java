@@ -12,38 +12,48 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.mateusz.rest.webservices.restful_web_services.users.PostNotFoundException;
 import com.mateusz.rest.webservices.restful_web_services.users.UserNotFoundException;
 
 @ControllerAdvice
 public class CustomisedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(Exception.class)
-    public final ResponseEntity<ErrorDetails> handleAllException(Exception ex, WebRequest request) throws Exception {
-        ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(),
-                request.getDescription(false));
-        return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+        @ExceptionHandler(Exception.class)
+        public final ResponseEntity<ErrorDetails> handleAllException(Exception ex, WebRequest request)
+                        throws Exception {
+                ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(),
+                                request.getDescription(false));
+                return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
 
-    @ExceptionHandler(UserNotFoundException.class)
-    public final ResponseEntity<ErrorDetails> handleUserNotFoundException(Exception ex, WebRequest request)
-            throws Exception {
-        ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(),
-                request.getDescription(false));
-        return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
-    }
+        @ExceptionHandler(UserNotFoundException.class)
+        public final ResponseEntity<ErrorDetails> handleUserNotFoundException(Exception ex, WebRequest request)
+                        throws Exception {
+                ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(),
+                                request.getDescription(false));
+                return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
+        }
 
-    @Override
-    protected ResponseEntity<Object> handleMethodArgumentNotValid(
-            MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status,
-            WebRequest request) {
+        @ExceptionHandler(PostNotFoundException.class)
+        public final ResponseEntity<ErrorDetails> handlePostNotFoundException(PostNotFoundException ex,
+                        WebRequest request) {
+                ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(),
+                                request.getDescription(false));
+                return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
+        }
 
-        ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(),
-                "Total errors are: " + ex.getErrorCount() + ", First error is: "
-                        + ex.getFieldError().getDefaultMessage(),
-                request.getDescription(false));
+        @Override
+        protected ResponseEntity<Object> handleMethodArgumentNotValid(
+                        MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status,
+                        WebRequest request) {
 
-        return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
+                ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(),
+                                "Total errors are: " + ex.getErrorCount() + ", First error is: "
+                                                + ex.getFieldError().getDefaultMessage(),
+                                request.getDescription(false));
 
-    }
+                return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
+
+        }
 
 }

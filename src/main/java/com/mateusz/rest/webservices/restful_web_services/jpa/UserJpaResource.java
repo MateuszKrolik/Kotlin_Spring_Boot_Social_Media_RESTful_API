@@ -6,7 +6,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.mateusz.rest.webservices.restful_web_services.users.Post;
 import com.mateusz.rest.webservices.restful_web_services.users.PostNotFoundException;
 import com.mateusz.rest.webservices.restful_web_services.users.User;
-// import com.mateusz.rest.webservices.restful_web_services.users.UserDaoService;
 import com.mateusz.rest.webservices.restful_web_services.users.UserNotFoundException;
 
 import jakarta.validation.Valid;
@@ -37,10 +36,7 @@ public class UserJpaResource {
 
     // @Autowired
     public UserJpaResource(UserRepository userRepository,
-            PostRepository postRepository
-    // UserDaoService userDaoService
-    ) {
-        // this.userDaoService = userDaoService;
+            PostRepository postRepository) {
         this.userRepository = userRepository;
         this.postRepository = postRepository;
     }
