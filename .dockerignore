@@ -32,3 +32,11 @@
 **/vendor
 LICENSE
 README.md
+images/
+postgresMount/
+docker-run-postgresql.sh
+gcloud.sh
+gcloud_custom.sh
+HELP.md
+.github/
+requests/
