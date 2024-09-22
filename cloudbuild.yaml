@@ -1,7 +1,7 @@
 steps:
-  - name: maven:3.9.7-eclipse-temurin-21-alpine
-    entrypoint: mvn
-    args: ['test']
+  - name: gradle:8.10.1-jdk21-alpine
+    entrypoint: gradle
+    args: ['clean', 'test', 'bootJar']
 
   - name: gcr.io/cloud-builders/docker
     args:
@@ -26,27 +26,27 @@ steps:
   # Deploy to Cloud Run
   - name: google/cloud-sdk
     args: [
-        'gcloud',
-        'run',
-        'deploy',
-        'mkrolik-spring-social-api', # fixed name w/o "$SHORT_SHA"
-        '--image=europe-west1-docker.pkg.dev/${PROJECT_ID}/${_ARTIFACT_REGISTRY_REPO}/mkrolik-spring-social-api:latest',
-        '--region',
-        'europe-west1',
-        '--platform',
-        'managed',
-        '--allow-unauthenticated',
-        '--memory',
-        '512Mi',
-        '--cpu',
-        '1',
-        '--max-instances',
-        '3',
-        '--port',
-        '8080',
-        '--set-secrets',
-        'NEON_PASSWORD=NEON_PASSWORD:latest,NEON_USERNAME=NEON_USERNAME:latest,NEON_PORT=NEON_PORT:latest,NEON_HOSTNAME=NEON_HOSTNAME:latest,NEON_DATABASE=NEON_DATABASE:latest,USER_NAME=USER_NAME:latest,PASSWORD=PASSWORD:latest',
-      ]
+      'gcloud',
+      'run',
+      'deploy',
+      'mkrolik-spring-social-api', # fixed name w/o "$SHORT_SHA"
+      '--image=europe-west1-docker.pkg.dev/${PROJECT_ID}/${_ARTIFACT_REGISTRY_REPO}/mkrolik-spring-social-api:latest',
+      '--region',
+      'europe-west1',
+      '--platform',
+      'managed',
+      '--allow-unauthenticated',
+      '--memory',
+      '512Mi',
+      '--cpu',
+      '1',
+      '--max-instances',
+      '3',
+      '--port',
+      '8080',
+      '--set-secrets',
+      'NEON_PASSWORD=NEON_PASSWORD:latest,NEON_USERNAME=NEON_USERNAME:latest,NEON_PORT=NEON_PORT:latest,NEON_HOSTNAME=NEON_HOSTNAME:latest,NEON_DATABASE=NEON_DATABASE:latest,USER_NAME=USER_NAME:latest,PASSWORD=PASSWORD:latest',
+    ]
 
 images:
   - europe-west1-docker.pkg.dev/${PROJECT_ID}/${_ARTIFACT_REGISTRY_REPO}/mkrolik-spring-social-api:latest

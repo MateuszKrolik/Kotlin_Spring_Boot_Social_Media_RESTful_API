@@ -10,21 +10,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API">
+  <a href="https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API">
     <img src="images/logo.svg" alt="Logo" width="160" height="160">
   </a>
 
-<h3 align="center">Spring Boot Social Media Rest API</h3>
+<h3 align="center">Kotlin Spring Boot Social Media Rest API</h3>
   <p align="center">
     <br />
-    <a href="https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MateuszKrolik/Kotlin_Kotlin_Spring_Boot_Social_Media_RESTful_API"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API">View Demo</a>
+    <a href="https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API">View Demo</a>
     ·
-    <a href="https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/issues">Report Bug</a>
+    <a href="https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/issues">Request Feature</a>
+    <a href="https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API/issues">Request Feature</a>
   </p>
 </div>
 
@@ -55,11 +55,10 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
 
 ### Click below gif to see the RESTful API 😉
 
-[![Product Name Screen Shot][product-screenshot]](https://mkrolik-spring-social-api-zkxyiin4mq-ew.a.run.app)
+[![Product Name Screen Shot][product-screenshot]](https://mkrolik-spring-social-api-805206095829.europe-west1.run.app/)
 
 ## User Model: id, name, birthDate
 
@@ -82,13 +81,13 @@
 
 ### Click below picture to open the Swagger Auto-Docs 😁
 
-[![swaggerui](images/swaggerui.jpeg)](https://mkrolik-spring-social-api-zkxyiin4mq-ew.a.run.app/swagger-ui/index.html)
+[![swaggerui](images/swaggerui.jpeg)](https://mkrolik-spring-social-api-805206095829.europe-west1.run.app//swagger-ui/index.html)
 
 ## HAL Explorer:
 
-### Click below picture to open the HAL Explorer UI 😉
+### Click below picture to open the HAL Explorer UI with Spring Actuator 😉
 
-[![hal_explorer](images/hal_explorer.jpeg)](https://mkrolik-spring-social-api-zkxyiin4mq-ew.a.run.app/explorer/index.html#uri=/)
+[![hal_explorer](images/hal_explorer.jpeg)](https://mkrolik-spring-social-api-805206095829.europe-west1.run.app//explorer/index.html#uri=/actuator)
 
 ### Basic Authentication with Spring Security
 
@@ -112,11 +111,11 @@
 
 <!-- Primary Technologies -->
 
-- [![MVC][MVC]][MVC-url]
 - [![REST API][REST API]][REST API-url]
 
 <!-- Programming Languages -->
 
+- [![Kotlin][Kotlin]][Kotlin-url]
 - [![Java][Java]][Java-url]
 
 <!-- Web Technologies -->
@@ -125,7 +124,7 @@
 - [![Spring Boot][Spring Boot]][Spring Boot-url]
 - [![Apache][Apache]][Apache-url]
 - [![Apache Tomcat][Apache Tomcat]][Apache Tomcat-url]
-- [![Maven][Maven]][Maven-url]
+- [![Gradle][Gradle]][Gradle-url]
 - [![Spring Security][Spring Security]][Spring Security-url]
 - [![Oracle][Oracle]][Oracle-url]
 
@@ -200,7 +199,7 @@ Password: social-media-user-password
 1. Clone the repo
 
 ```sh
-git clone https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API.git
+git clone https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API.git
 ```
 
 2. Install Build Image w/ Docker-Compose
@@ -271,9 +270,9 @@ gcloud projects add-iam-policy-binding $GCLOUD_ID \
 ## Usage
 
 _Below you'll find visual usage example representation if form of a video.
-To test these out yourself visit this [Link](https://mkrolik-spring-social-api-zkxyiin4mq-ew.a.run.app) 😉_
+To test these out yourself visit this [Link](https://mkrolik-spring-social-api-805206095829.europe-west1.run.app/) 😉_
 
-https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/assets/127691471/9b15256b-1155-4c23-a826-e38e62c11106
+https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API/assets/127691471/9b15256b-1155-4c23-a826-e38e62c11106
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -281,7 +280,7 @@ https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/assets/127
 
 ## Roadmap
 
-- [x] Monolithic Architecture: Model-View-Controller (MVC)
+- [x] Monolithic Architecture
 - [x] Containerization via Docker and Docker-Compose
 - [x] Constructor-based Dependency Injection and Bean AutoWiring using Spring Framework
 - [x] Starter-Projects and Auto-Configuration using Spring Boot Framework
@@ -292,6 +291,7 @@ https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/assets/127
 - [x] SwaggerUI Documentation Auto-Generation
 - [x] Angular-based HAL Explorer UI
 - [x] Custom Exception Handling
+- [x] Kotlin's Data Classes
 - [x] Content Negotiation - Support for XML Accept-Headers using Jackson DataFormat XML
 - [x] HTTP Status Codes and Location Headers
 - [x] Auto-incrementing Primary Keys (PKs)
@@ -319,7 +319,7 @@ https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/assets/127
 - [x] Best Practices
 - [x] FFmpeg for Video-to-GIF Conversion
 
-See the [open issues](https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -354,9 +354,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Mateusz Królik - [Mateusz Królik](https://www.linkedin.com/in/mateusz-kr%C3%B3lik-8b1862262/) - [mateuszkrolik87@gmail.com](mailto:mateuszkrolik7@gmail.com)
 
-Project Link: [Project Link](https://mkrolik-spring-social-api-zkxyiin4mq-ew.a.run.app)
+Project Link: [Project Link](https://mkrolik-spring-social-api-805206095829.europe-west1.run.app/)
 
-GitHub Repository Link: [GitHub Repository Link](https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API)
+GitHub Repository Link: [GitHub Repository Link](https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -375,16 +375,16 @@ GitHub Repository Link: [GitHub Repository Link](https://github.com/MateuszKroli
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
-[contributors-url]: https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
-[forks-url]: https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/network/members
-[stars-shield]: https://img.shields.io/github/stars/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
-[stars-url]: https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
-[issues-url]: https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/issues
-[license-shield]: https://img.shields.io/github/license/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
-[license-url]: https://github.com/MateuszKrolik/Spring_Boot_Social_Media_RESTful_API/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
+[contributors-url]: https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
+[forks-url]: https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API/network/members
+[stars-shield]: https://img.shields.io/github/stars/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
+[stars-url]: https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
+[issues-url]: https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API/issues
+[license-shield]: https://img.shields.io/github/license/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API.svg?style=for-the-badge
+[license-url]: https://github.com/MateuszKrolik/Kotlin_Spring_Boot_Social_Media_RESTful_API/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mateusz-królik-8b1862262
 [product-screenshot]: images/screenshot.gif
@@ -468,3 +468,7 @@ GitHub Repository Link: [GitHub Repository Link](https://github.com/MateuszKroli
 [Mockito]: https://img.shields.io/badge/Mockito-FFFFFF?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik04LjI2Njk3IDEuNjE4NDVDOC40Nzc3NiAxLjI2MTg4IDguOTM3NyAxLjE0MzcxIDkuMjk0MjcgMS4zNTQ0OUwxMC4xMjYgMS44NDYxOUwxOS4zNzMxIDcuMTUzMzhDMTkuNzMyNCA3LjM1OTU3IDE5Ljg1NjQgNy44MTc5NCAxOS42NTAzIDguMTc3MTlDMTkuNDQ0MSA4LjUzNjQ0IDE4Ljk4NTcgOC42NjA1MyAxOC42MjY0IDguNDU0MzRMMTcuNzgyOCA3Ljk3MDEzTDE2LjI3OCAxMC41Njc1TDE2LjI3NjIgMTAuNTY2NUwxMy43MTgxIDkuMDk0NjdDMTMuMzU5MSA4Ljg4ODEgMTIuOTAwNiA5LjAxMTY5IDEyLjY5NCA5LjM3MDcyQzEyLjQ4NzUgOS43Mjk3NSAxMi42MTEgMTAuMTg4MyAxMi45NzAxIDEwLjM5NDhMMTUuNTI2IDExLjg2NTRMMTQuNTY0NiAxMy41MjVMMTQuNTYyOCAxMy41MjM5TDEwLjM1OTggMTEuMTA1N0MxMC4wMDA4IDEwLjg5OTEgOS41NDIyNyAxMS4wMjI3IDkuMzM1NyAxMS4zODE4QzkuMTI5MTMgMTEuNzQwOCA5LjI1MjcyIDEyLjE5OTMgOS42MTE3NSAxMi40MDU5TDEzLjgxMjYgMTQuODIyOUwxMi45MjcgMTYuMzUxNUwxMi45MjUyIDE2LjM1MDVMMTAuMzEyNSAxNC44NDcyQzkuOTUzNDggMTQuNjQwNyA5LjQ5NDk3IDE0Ljc2NDMgOS4yODg0IDE1LjEyMzNDOS4wODE4MyAxNS40ODIzIDkuMjA1NDIgMTUuOTQwOCA5LjU2NDQ1IDE2LjE0NzRMMTIuMTc1MSAxNy42NDk0TDExLjA1NTggMTkuNTgxNEM5LjcxNTggMjEuODk0MyA2Ljc0ODAzIDIyLjY4NjggNC40MjcwOSAyMS4zNTE0QzIuMTA2MTUgMjAuMDE2MSAxLjMxMDkzIDE3LjA1ODUgMi42NTA5MyAxNC43NDU2TDkuMzcyNjggMy4xNDMzMkw5LjM2NjgyIDMuMTM5ODlMOC41MzA5MyAyLjY0NTc0QzguMTc0MzYgMi40MzQ5NSA4LjA1NjE4IDEuOTc1MDIgOC4yNjY5NyAxLjYxODQ1WiIgZmlsbD0iIzFDMjc0QyIvPg0KPHBhdGggZD0iTTIwIDE2Ljk5OTlDMjEuMTA0NiAxNi45OTk5IDIyIDE2LjA2NzIgMjIgMTQuOTE2NkMyMiAxNC4xOTY3IDIxLjIxNyAxMy4yMzU4IDIwLjYzMDkgMTIuNjE3NEMyMC4yODM5IDEyLjI1MTIgMTkuNzE2MSAxMi4yNTEyIDE5LjM2OTEgMTIuNjE3NEMxOC43ODMgMTMuMjM1OCAxOCAxNC4xOTY3IDE4IDE0LjkxNjZDMTggMTYuMDY3MiAxOC44OTU0IDE2Ljk5OTkgMjAgMTYuOTk5OVoiIGZpbGw9IiMxQzI3NEMiLz4NCjwvc3ZnPg==&color=white&logoColor=black
 [Spring Data JPA-url]: https://spring.io/projects/spring-data-jpa
 [Spring Data JPA]: https://img.shields.io/badge/Spring_Data_JPA-black?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4gPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSLQodC70L7QuV8xIiBkYXRhLW5hbWU9ItCh0LvQvtC5IDEiIHZpZXdCb3g9IjAgMCA0MzAuNDQgNTI4LjUiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDA5MjQ1O3N0cm9rZTojZmZmO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDoxMHB4O30uY2xzLTJ7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMDgyLjA2LDUxNy45aC00MjB2MTA0YzI5LDY1LjIxLDM5Myw2OC4zMiw0MjAsMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02NTcuMDYgLTE0OC41KSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTEwODIuNSw0MTloLTQyMFY1MjNjMjksNjUuMjEsMzkzLDY4LjMyLDQyMCwwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTY1Ny4wNiAtMTQ4LjUpIj48L3BhdGg+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTA4Mi41LDMxMy40MmgtNDIwdjEwNGMyOSw2NS4yMSwzOTMsNjguMzEsNDIwLDBaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjU3LjA2IC0xNDguNSkiPjwvcGF0aD48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMDgyLjUsMjExaC00MjBWMzE1YzI5LDY1LjIxLDM5Myw2OC4zMiw0MjAsMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02NTcuMDYgLTE0OC41KSI+PC9wYXRoPjxlbGxpcHNlIGNsYXNzPSJjbHMtMSIgY3g9IjIxNS45NCIgY3k9IjYxLjY3IiByeD0iMjA5LjUiIHJ5PSI1Ni42NyI+PC9lbGxpcHNlPjxlbGxpcHNlIGNsYXNzPSJjbHMtMiIgY3g9IjQzLjQ0IiBjeT0iMTQxLjYzIiByeD0iOS41IiByeT0iMTQuNzUiPjwvZWxsaXBzZT48ZWxsaXBzZSBjbGFzcz0iY2xzLTIiIGN4PSI0My40NCIgY3k9IjI0NC4xIiByeD0iOS41IiByeT0iMTQuNzUiPjwvZWxsaXBzZT48ZWxsaXBzZSBjbGFzcz0iY2xzLTIiIGN4PSI0My40NCIgY3k9IjM0NS4wMiIgcng9IjkuNSIgcnk9IjE0Ljc1Ij48L2VsbGlwc2U+PGVsbGlwc2UgY2xhc3M9ImNscy0yIiBjeD0iNDMuNDQiIGN5PSI0NTIuMTYiIHJ4PSI5LjUiIHJ5PSIxNC43NSI+PC9lbGxpcHNlPjwvc3ZnPiA=
+[Kotlin]: https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white
+[Kotlin-url]: https://kotlinlang.org/
+[Gradle]: https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white
+[Gradle-url]: https://gradle.org/

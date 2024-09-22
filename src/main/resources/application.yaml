@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: Spring_Boot_Social_Media_RESTful_API
+
+  datasource:
+    url: jdbc:postgresql://${NEON_HOSTNAME:localhost}:${NEON_PORT:5432}/${NEON_DATABASE:social_media_database}
+    username: ${NEON_USERNAME:postgres}
+    password: ${NEON_PASSWORD:mysecretpassword}
+
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  security:
+    user:
+      name: ${USER_NAME:dummyusername}
+      password: ${PASSWORD:dummypassword}
+
+server:
+  port: ${PORT:8080}
+  forward-headers-strategy: framework
+
+logging:
+  level:
+    org.springframework: info
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

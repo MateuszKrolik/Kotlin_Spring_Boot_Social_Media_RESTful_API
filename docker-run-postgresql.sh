@@ -8,6 +8,6 @@ docker run -d \
   -e PGDATA=/var/lib/postgresql/data/pgdata \
 	-v /Users/mateuszkrolik/Developer/restful-web-services/postgresMount:/var/lib/postgresql/data \
   -p 5432:5432 \
-  postgres:16-alpine
+  postgres:16.4-alpine
 
 # psql -U postgres -h localhost -p 5432
